@@ -4,7 +4,7 @@ import {
     Link
 } from "react-router-dom";
 import { Layout, Menu, Button } from 'antd';
-import { MailOutlined, AppstoreOutlined, SettingOutlined, SearchOutlined, MenuOutlined } from '@ant-design/icons';
+import { MailOutlined, AppstoreOutlined, SettingOutlined, DownOutlined, SearchOutlined, MenuOutlined } from '@ant-design/icons';
 
 const { Header, } = Layout;
 const { SubMenu } = Menu;
@@ -62,7 +62,7 @@ export default class HeaderComp extends Component {
                             <Menu.Item key="app" disabled icon={<AppstoreOutlined />}>
                                 Navigation Two
                             </Menu.Item> */}
-                            <SubMenu   title="Home">
+                            <SubMenu title={<span>Home &nbsp; <DownOutlined /></span>}>
                                 <Menu.Item key="setting:1">Option 1</Menu.Item>
                                 <Menu.Item key="setting:2">Option 2</Menu.Item>
                             </SubMenu>
