@@ -30,6 +30,19 @@ body {
 // .make-container(@screen-xl-min, @screen-xl);
 // .make-container(@screen-xxl-min, @screen-xxl); 
 
+
+
+.inMobile{
+    display: none !important;
+}
+
+@media (max-width: 576px){
+    .inMobile{
+        // display: inherit !important;
+        display: unset !important;
+    }
+}
+
 .container {
     width: 100%;
     padding-right: 15px;

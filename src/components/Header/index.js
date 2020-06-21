@@ -91,7 +91,7 @@ export default class HeaderComp extends Component {
                     <div>
                         <Link className='login' to='/login'><SearchOutlined />&nbsp; Login</Link>
 
-                        <Button className="menu-btn" type="primary" icon={<MenuOutlined  />} size={22} />
+                        <Button className="menu-btn inMobile" type="primary" icon={<MenuOutlined  />} size={22} />
                         
                     </div>
                 </div>

@@ -1,6 +1,9 @@
 import './Home.less';
 import React, { Component } from 'react'
 import { Row, Col, Grid } from 'antd';
+import {
+    FacebookOutlined, WhatsAppOutlined , MailOutlined, MessageOutlined, LinkedinOutlined, InstagramOutlined, TwitterOutlined 
+} from '@ant-design/icons';
 
 export default class Home extends Component {
 
@@ -42,7 +45,6 @@ export default class Home extends Component {
                     <img src='/assets/phone_top.png' className='phone-img' alt='phone'></img>
                 </div>
                 <div className='container use-case-section'>
-                    
                     <div>
                         <Row>
                             <Col xs={{ span: 24, }} lg={{ span: 12,  }} md={{span: 12}}>
@@ -57,7 +59,6 @@ export default class Home extends Component {
                                 </div>
                             </Col>
                         </Row>
-
                         <Row className="reverse">
                             <Col className="border-right border-bottom border border-radius-b-r" xs={{ span: 24, }} lg={{ span: 12,  }} md={{span: 12}}>
                                 <div className="details">
@@ -71,7 +72,6 @@ export default class Home extends Component {
                                 </div>    
                             </Col>
                         </Row>
-
                         <Row>
                             <Col className="border-left border-top border support-margin border-radius-t-l" xs={{ span: 24, }} lg={{ span: 12,  }} md={{span: 12}}>
                                 <div className="details">
@@ -85,7 +85,6 @@ export default class Home extends Component {
                                 </div>
                             </Col>
                         </Row>
-
                         <Row className="reverse">
                             <Col xs={{ span: 24, }} lg={{ span: 12,  }} md={{span: 12}}>
                                 <div className="details">
@@ -100,7 +99,9 @@ export default class Home extends Component {
                             </Col>
                         </Row>
                     </div>
-                    
+                </div>
+                <div className="social-link-fixed">
+                    <FacebookOutlined /> <WhatsAppOutlined /> <MessageOutlined /> <InstagramOutlined /> <MailOutlined /> <TwitterOutlined /> <LinkedinOutlined />
                 </div>
             </>
         )
