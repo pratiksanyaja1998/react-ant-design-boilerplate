@@ -1,0 +1,129 @@
+.top-intro-section{
+    background-image: url('/assets/home_banner.png');
+    text-align: center;
+    background-size: contain;
+    padding-top: 100px;
+
+    .app-store-div{
+        img{
+            width: 100px;
+        }
+    }
+
+    .phone-img{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    h1 , h2, p{
+        color: #fff;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    p{
+        font-size: 17px;
+    }
+
+    h1{
+        font-weight: bold;
+        font-family: 'Berkshire Swash', cursive;
+        letter-spacing: 2px;
+        font-size: 26px;
+    }
+
+    .app-store-div{
+        padding: 10px;
+        padding-bottom: 25px;
+    }
+}
+
+.use-case-section{
+
+    .border-left{
+        border-left: 2px solid #473f92;
+    }
+
+    .border-right{
+        border-right: 2px solid #473f92;
+    }
+
+    .border-top{
+        border-top: 2px solid #473f92;
+    }
+
+    .border-bottom{
+        border-bottom: 2px solid #473f92;
+    }
+    
+    .support-margin{
+        margin-top: -2px;
+    }
+
+    .border-radius-b-r{
+        border-radius: 0 0 170px;
+    }
+
+    .border-radius-t-l{
+        border-radius: 170px 0 0 0;
+    }
+    
+    .ant-col{
+        text-align: center;
+        padding: 40px;
+        display: flex;
+
+        h1, p, h2{
+            text-align: left;
+            margin: 0;
+        }
+
+        p{
+            font-size: 18px;
+        }
+
+        h2{
+            font-weight: bold;
+        }
+
+        img{
+            // max-width: 300px;
+            // width: auto;
+            // height: 250px;
+        }
+
+        .details{
+            margin: auto;
+        }
+
+        .img-div{
+            margin: auto;
+        }
+
+    }
+
+    .reverse{
+        flex-direction: row-reverse;
+
+        .ant-col{
+            h1, p, h2{
+                text-align: right;
+            }
+    
+        }
+    }
+
+    @media (max-width: 576px){
+        .ant-col{
+            h1, p, h2{
+                text-align: center !important;
+            }
+    
+        }
+
+        .border{
+            border: none !important;
+        }
+    }
+
+}
