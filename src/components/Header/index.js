@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import { Layout, Menu, Button } from 'antd';
 import { MailOutlined, AppstoreOutlined, SettingOutlined, DownOutlined, SearchOutlined, MenuOutlined } from '@ant-design/icons';
+import HeaderSearch from 'ant-design-pro/lib/HeaderSearch';
 
 const { Header, } = Layout;
 const { SubMenu } = Menu;
@@ -88,7 +89,23 @@ export default class HeaderComp extends Component {
                             </Menu.Item>
                         </Menu>
                     </div>
-                    <div>
+                    <div style={{display: 'flex'}}>
+
+                        <div className={'search-root'} >
+                            <HeaderSearch
+                                placeholder="search ..."
+                                // defaultOpen={true}
+                                // open={false}
+                                dataSource={['item 1', 'item 2', 'item 3']}
+                                onSearch={value => {
+                                    console.log('input', value); // eslint-disable-line
+                                }}
+                                onPressEnter={value => {
+                                    console.log('enter', value); // eslint-disable-line
+                                }}
+                            />
+                        </div>
+
                         <Link className='login' to='/login'><SearchOutlined />&nbsp; Login</Link>
 
                         <Button className="menu-btn inMobile" type="primary" icon={<MenuOutlined  />} size={22} />
