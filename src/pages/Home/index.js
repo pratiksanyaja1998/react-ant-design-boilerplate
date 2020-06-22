@@ -37,7 +37,7 @@ export default class Home extends Component {
             <>
                 <div className="top-intro-section">
                     <p>INDIAN CREATORS, ARTISTS & CELEBS</p>
-                    <h1>Talk . Watch . strean . Support!</h1>
+                    <h1>Talk . Watch . stream . Support!</h1>
                     <div className="app-store-div">
                         <img src='/assets/playstore.png' alt='play-store-logo' />
                         <img src='/assets/istore.png' alt='istore-logo' />

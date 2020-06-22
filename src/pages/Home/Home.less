@@ -84,7 +84,7 @@
     
     .ant-col{
         text-align: center;
-        padding: 40px 0;
+        padding: 20px 0;
         display: flex;
 
         p, h2{
@@ -116,6 +116,11 @@
 
         .img-div{
             margin: auto;
+            
+            img{
+                max-height: 200px;
+                width: inherit;
+            }
         }
 
     }
@@ -138,6 +143,16 @@
 
             h1, p, h2{
                 text-align: center !important;
+            }
+
+            &:first-child{
+                margin-top: 25px;
+            }
+            
+            .img-div{
+                img{
+                    max-height: 164px;
+                }
             }
     
         }
