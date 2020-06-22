@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import {
     Link
 } from "react-router-dom";
-import { Layout, Menu, Button } from 'antd';
-import { MailOutlined, AppstoreOutlined, SettingOutlined, DownOutlined, SearchOutlined, MenuOutlined } from '@ant-design/icons';
+import { Layout, Menu, Button, Dropdown } from 'antd';
+import { MailOutlined, AppstoreOutlined, SettingOutlined, DownOutlined, UserOutlined, SearchOutlined, MenuOutlined } from '@ant-design/icons';
 import HeaderSearch from 'ant-design-pro/lib/HeaderSearch';
 
 const { Header, } = Layout;
@@ -49,7 +49,27 @@ export default class HeaderComp extends Component {
 
 
     render() {
-        const { isScrolled }=this.state
+        const { isScrolled }=this.state;
+
+        const menu = (
+            <Menu>
+              <Menu.Item>
+                <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">
+                  Profile
+                </a>
+              </Menu.Item>
+              <Menu.Item>
+                <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">
+                 Account Settings
+                </a>
+              </Menu.Item>
+              <Menu.Item>
+                <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">
+                  Logout
+                </a>
+              </Menu.Item>
+            </Menu>
+          );
 
         return (
             <Header className={isScrolled ? "header-blue" : ''}>
@@ -110,6 +130,10 @@ export default class HeaderComp extends Component {
 
                         <Button className="menu-btn inMobile" type="primary" icon={<MenuOutlined  />} size={22} />
                         
+                        <Dropdown overlay={menu} placement="bottomRight">
+                             <Button className="menu-btn" type="primary" icon={<UserOutlined />} size={22} />
+                        </Dropdown>
+
                     </div>
                 </div>
             </Header>
