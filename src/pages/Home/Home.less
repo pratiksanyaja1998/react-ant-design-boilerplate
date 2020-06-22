@@ -33,6 +33,23 @@
             width: 160px;
         }
     }
+
+    @media (max-width: 576px){
+        p{
+            font-size: 20px;
+        }
+
+        h1{
+            font-size: 35px;
+        }
+
+        .app-store-div{
+           
+            img{
+                width: 130px;
+            }
+        }
+    }
 }
 
 .use-case-section{
@@ -67,7 +84,7 @@
     
     .ant-col{
         text-align: center;
-        padding: 40px;
+        padding: 40px 0;
         display: flex;
 
         p, h2{
@@ -115,7 +132,10 @@
     }
 
     @media (max-width: 576px){
+
         .ant-col{
+            padding: 12px;
+
             h1, p, h2{
                 text-align: center !important;
             }
