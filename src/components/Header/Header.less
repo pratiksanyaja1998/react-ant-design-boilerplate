@@ -80,16 +80,35 @@
         background: transparent !important;
         border-color: #fff !important;
         border-radius: 5px;
+        display: none;
     }
 
-    @media (max-width: 576px){
+    @media (max-width: 1024px){
       .ant-menu, .search-root{
           display: none !important;
       }  
+      .menu-btn{
+          display: block !important;
+      }
     }
 
 }
 
 .header-blue{
     background-color: #473f92de !important;
+}
+
+.ant-drawer{
+
+    .ant-drawer-header{
+        padding: 8px 24px;
+        background-color: #473f92de !important;
+    }
+
+    .ant-drawer-body{
+        padding: 0px !important;
+        .ant-menu{
+            width: 100% !important;
+        }
+    }
 }

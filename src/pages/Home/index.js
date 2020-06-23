@@ -16,21 +16,21 @@ export default class Home extends Component {
             isScrolled: false,
         }
 
-        this.onScrolling = this.onScrolling.bind(this);
+        // this.onScrolling = this.onScrolling.bind(this);
     }
 
-    componentDidMount(){
-        document.addEventListener('scroll', this.onScrolling);
-    }
+    // componentDidMount(){
+    //     document.addEventListener('scroll', this.onScrolling);
+    // }
 
-    componentWillUnmount(){
-        document.removeEventListener('scroll', this.onScrolling);
-    }
+    // componentWillUnmount(){
+    //     document.removeEventListener('scroll', this.onScrolling);
+    // }
 
-    onScrolling(e){
-        console.log(e);
-        this.setState({isScrolled: true})
-    }
+    // onScrolling(e){
+    //     console.log(e);
+    //     this.setState({isScrolled: true})
+    // }
 
     render() {
         return (

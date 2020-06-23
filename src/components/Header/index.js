@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 import {
     Link
 } from "react-router-dom";
-import { Layout, Menu, Button, Dropdown } from 'antd';
-import { MailOutlined, AppstoreOutlined, SettingOutlined, DownOutlined, UserOutlined, SearchOutlined, MenuOutlined } from '@ant-design/icons';
+import { Layout, Menu, Button, Dropdown, Drawer } from 'antd';
+import { MailOutlined, AppstoreOutlined, SettingOutlined, DownOutlined, UserOutlined, SearchOutlined, MenuOutlined,
+    CalendarOutlined,
+    LinkOutlined, } from '@ant-design/icons';
 import HeaderSearch from 'ant-design-pro/lib/HeaderSearch';
 
 const { Header, } = Layout;
@@ -18,6 +20,7 @@ export default class HeaderComp extends Component {
         this.state={
             isScrolled: false,
             current: 'mail',
+            isOpenDrawer: false,
         }
 
         this.onScrolling = this.onScrolling.bind(this);
@@ -47,9 +50,17 @@ export default class HeaderComp extends Component {
         });
     };
 
+    showDrawer = () => {
+        this.setState({isOpenDrawer: true})
+    };
+
+    onCloseDrawer = () => {
+        this.setState({isOpenDrawer: false})
+    };
+
 
     render() {
-        const { isScrolled }=this.state;
+        const { isScrolled, isOpenDrawer }=this.state;
 
         const menu = (
             <Menu>
@@ -128,7 +139,7 @@ export default class HeaderComp extends Component {
 
                         <Link className='login' to='/login'><SearchOutlined />&nbsp; Login</Link>
 
-                        <Button className="menu-btn inMobile" type="primary" icon={<MenuOutlined  />} size={22} />
+                        <Button className="menu-btn" onClick={this.showDrawer} type="primary" icon={<MenuOutlined  />} size={22} />
                         
                         <Dropdown overlay={menu} placement="bottomRight">
                              <Button className="menu-btn" type="primary" icon={<UserOutlined />} size={22} />
@@ -136,6 +147,39 @@ export default class HeaderComp extends Component {
 
                     </div>
                 </div>
+                <Drawer
+                    title={<img src='assets/white_logo.png' alt='logo' />}
+                    placement="left"
+                    closable={false}
+                    onClose={this.onCloseDrawer}
+                    visible={isOpenDrawer}
+                >
+                    <Menu
+                        style={{ width: 256 }}
+                        defaultSelectedKeys={['1']}
+                        defaultOpenKeys={['sub1']}
+                        mode={'inline'}
+                        theme={'light'}
+                        >
+                        <SubMenu key="sub1" icon={null} title="Home">
+                            <Menu.Item key="3">Option 1</Menu.Item>
+                            <Menu.Item key="4">Option 2</Menu.Item>
+                        </SubMenu>
+                        <Menu.Item key="1" icon={null}>
+                            Celebrities
+                        </Menu.Item>
+                        <Menu.Item key="2" icon={null}>
+                            Social Media Stars
+                        </Menu.Item>
+                        <Menu.Item key="3" icon={null}>
+                            Experience
+                        </Menu.Item>
+                        <Menu.Item key="5" icon={null}>
+                            Download
+                        </Menu.Item>
+                    </Menu>
+                </Drawer>
+            
             </Header>
         )
     }
