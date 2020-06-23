@@ -142,7 +142,7 @@ export default class HeaderComp extends Component {
                         <Button className="menu-btn" onClick={this.showDrawer} type="primary" icon={<MenuOutlined  />} size={22} />
                         
                         <Dropdown overlay={menu} placement="bottomRight">
-                             <Button className="menu-btn" type="primary" icon={<UserOutlined />} size={22} />
+                             <Button className="account-btn" type="primary" icon={<UserOutlined />} size={22} />
                         </Dropdown>
 
                     </div>
